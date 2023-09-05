@@ -1,0 +1,20 @@
+.navigate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.3em;
+}
+
+.navigate__item {
+    color: var(--light-gray-color);
+    padding: 10px;
+    transition: .3s linear;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.navigate__item:hover {
+    background: var(--light-gray2-color);
+    color: var(--f-color);
+}

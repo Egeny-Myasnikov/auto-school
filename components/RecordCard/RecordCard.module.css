@@ -1,0 +1,171 @@
+.recordCard {
+    display: grid;
+    gap: 30px;
+    min-width: 290px;
+    padding: 20px 40px 40px 40px;
+    border-radius: 10px;
+    background: var(--gray-color);
+    color: var(--f-color);
+    font-size: 1.5em;
+
+}
+
+.recordCard.removable {
+    opacity: 0;
+
+}
+
+.actionsWrap {
+    display: inline;
+    cursor: pointer;
+    justify-self: end;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    position: relative;
+
+}
+
+.action__close {
+    opacity: 0;
+    visibility: none;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-top: 1px solid var(--f-color);
+    border-bottom: 1px solid var(--f-color);
+}
+
+.action__close.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.action__close::after,
+.action__close::before {
+    content: '';
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    width: 70%;
+    height: 2px;
+    background: var(--f-color);
+}
+
+.action__close::after {
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.action__close::before {
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    background: var(--t-color);
+    position: relative;
+    border: 1px solid transparent;
+    padding: 0px;
+    transition: var(--transition);
+}
+
+
+
+.actions:after,
+.actions:before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.actions:after {
+    transform: translateX(-200%);
+}
+
+.actions:before {
+    transform: translateX(200%);
+}
+
+.actions__delete,
+.actions__edit {
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    background: var(--t-color);
+    color: var(--gray-color);
+    transition: var(--transition);
+
+}
+
+.actionsWrap.active .actions {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid var(--t-color);
+    padding: 10px;
+}
+
+.actionsWrap.active .actions::after,
+.actionsWrap.active .actions::before {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.actionsWrap.active .actions__delete,
+.actionsWrap.active .actions__edit {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+.recordCard__info {
+    display: grid;
+    gap: 5px;
+
+}
+
+.recordCard__info>span {
+    font-weight: bold;
+    color: var(--light-gray-color);
+}
+
+.idx {
+    border-bottom: 1px solid var(--light-gray-color);
+    padding-bottom: 5px;
+    justify-content: center;
+}
+
+.date {}
+
+.time {}
+
+.instructorName {}

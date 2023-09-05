@@ -1,0 +1,28 @@
+.header {
+    grid-area: header;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 60px;
+    background: var(--gray-color);
+    padding: 60px 30px 30px 30px;
+}
+
+
+
+.header__btn {
+    background: var(--f-color);
+    color: var(--gray-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: .3s linear;
+    font-size: 1.3em;
+}
+
+.header__btn:hover {
+    background: var(--f-color);
+    opacity: 0.7;
+}
